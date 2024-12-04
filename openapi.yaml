@@ -1,0 +1,23 @@
+openapi: 3.0.0
+info:
+  title: SharePoint API
+  description: API for accessing SharePoint documents
+  version: 1.0.0
+paths:
+  /fetch-documents:
+    get:
+      summary: Fetch documents from SharePoint
+      parameters:
+        - name: Authorization
+          in: header
+          required: true
+          description: Bearer token for authorization
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                type: object
